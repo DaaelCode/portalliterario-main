@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generos</title>
+</head>
+<body>
+    <h1>Generos</h1>
+
+{% for genero in generos %}
+<div>
+<h2><strong>Nome: </strong>{{ genero.nome }}</h2>
+<p><strong>Livros: </strong>{{ genero.livros }} </p>
+</div>
+{% endfor %}
+    
+</body>
+</html>

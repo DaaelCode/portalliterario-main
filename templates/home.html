@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Livros</h1>
+
+{% for livro in livros %}
+  <div>
+    <li>
+        <a href="{{ url_for('autores', id=autor.id) }}">{{ autor.nome }}</a> AQUI É SO MODELO, TEM QUE MEXER, MAS DA PRA USAR ONDE TU QUISER, SO BOTEI PRA SER MAIS FACIL
+    </li>
+    <img src="{{ url_for('static', filename=palestrante.foto) }}" /> #AQUI TBM KKKKKKKKKKKK
+
+    <h2>{{ livro.titulo }} ({{ livro.ano }})</h2>
+    <p><strong>Descrição:</strong> {{ livro.descricao }}</p>
+    <p><strong>Autor:</strong> {{ livro.autor.nome }}</p>
+    <p><strong>Biografia:</strong> {{ livro.autor.biografia }}</p>
+    <p><strong>Gênero:</strong> {{ livro.genero.nome }}</p>
+  </div>
+  <hr>
+{% endfor %}
+
+</body>
+</html>
